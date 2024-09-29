@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:start": "docker compose up -d",
-    "db:stop": "docker compose down"
+    "db:start": "sh -c 'docker compose up -d'",
+    "db:stop": "sh -c 'docker compose down'",
+    "db:exec": "sh -c 'docker exec -it container_postgres psql -U postgres -d db'"
   },
   "dependencies": {
     "@auth/core": "^0.35.2",
