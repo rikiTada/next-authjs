@@ -9,18 +9,22 @@
     "lint": "next lint",
     "db:start": "sh -c 'docker compose up -d'",
     "db:stop": "sh -c 'docker compose down'",
-    "db:exec": "sh -c 'docker exec -it container_postgres psql -U postgres -d db'"
+    "db:exec": "sh -c 'docker exec -it container_postgres psql -U postgres -d db'",
+    "db:seed": "dotenv -- tsx src/db/seed.ts",
+    "seed": "tsx src/db/seed.ts"
   },
   "dependencies": {
     "@auth/core": "^0.35.2",
     "@auth/drizzle-adapter": "^1.5.3",
     "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "drizzle-orm": "^0.33.0",
     "next": "14.2.4",
     "next-auth": "^5.0.0-beta.21",
     "pg": "^8.13.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tsx": "^4.19.1"
   },
   "devDependencies": {
     "@types/node": "^20",
