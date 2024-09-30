@@ -18,14 +18,21 @@
   "dependencies": {
     "@auth/core": "^0.35.2",
     "@auth/drizzle-adapter": "^1.5.3",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "drizzle-orm": "^0.33.0",
+    "lucide-react": "^0.446.0",
     "next": "14.2.4",
     "next-auth": "^5.0.0-beta.21",
     "pg": "^8.13.0",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.19.1"
   },
   "devDependencies": {
