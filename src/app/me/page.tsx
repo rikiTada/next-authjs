@@ -25,7 +25,7 @@ export default async function Page() {
           src={session.user.image!}
         />
       </div>
-      <div className="my-4 p-4 bg-muted rounded">
+      <div className="my-4 p-4 bg-muted rounded overflow-x-auto">
         <pre>{JSON.stringify(session, null, 2)}</pre>
       </div>
 
