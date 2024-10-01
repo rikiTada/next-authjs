@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { schemaBase } from "@/db/schema/util";
 import {
   boolean,
   integer,
@@ -9,14 +9,6 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 import type { AdapterAccountType } from "next-auth/adapters";
-
-export const schemaBase = {
-  id: uuid("id")
-    .default(sql`gen_random_uuid()`)
-    .primaryKey(),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updateAt: timestamp("update_at").defaultNow().notNull(),
-};
 
 export const users = pgTable("user", {
   ...schemaBase,
