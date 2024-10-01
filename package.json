@@ -9,6 +9,7 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:reset": "drizzle-kit drop",
     "db:studio": "bunx drizzle-kit studio",
     "db:start": "sh -c 'docker compose up -d'",
     "db:stop": "sh -c 'docker compose down'",
