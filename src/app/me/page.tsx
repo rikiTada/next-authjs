@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { auth } from "@/auth";
+import { auth, signOut } from "@/auth";
+import { Button } from "@/components/ui/button";
 import { redirect } from "next/navigation";
 
 export default async function Page() {
@@ -27,13 +28,22 @@ export default async function Page() {
       <div className="my-4 p-4 bg-muted rounded">
         <pre>{JSON.stringify(session, null, 2)}</pre>
       </div>
-      {/*
-      <SignoutButton
+
+      {/* <SignoutButton
         signOut={async () => {
           "use server";
           await signOut({ redirectTo: "/" });
         }}
       /> */}
+      <form
+        action={async () => {
+          "use server";
+          await signOut({ redirectTo: "/" });
+        }}
+        className="w-full"
+      >
+        <Button className="w-full">Sign out</Button>
+      </form>
     </div>
   );
 }
