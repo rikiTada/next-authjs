@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { users } from "@/db/schema";
+import { users } from "@/db/schema/auth-schema";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(_req: NextRequest) {

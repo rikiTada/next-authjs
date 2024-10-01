@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
@@ -9,12 +10,23 @@ export default async function Page() {
   }
 
   return (
-    <div>
-      {session.user.id}
-      {session.user.name}
-      {session.user.email}
-      <img width={14} src={session.user.image!} />
-
+    <div className="mx-4">
+      <h1 className="text-xl font-semibold my-6">You are session data.</h1>
+      <div className="flex gap-8">
+        <div>
+          <p>id: {session.user.id}</p>
+          <p>name: {session.user.name}</p>
+          <p>email: {session.user.email}</p>
+        </div>
+        <img
+          alt="user image"
+          className="size-20 min-h-full aspect-square rounded-full"
+          src={session.user.image!}
+        />
+      </div>
+      <div className="my-4 p-4 bg-muted rounded">
+        <pre>{JSON.stringify(session, null, 2)}</pre>
+      </div>
       {/*
       <SignoutButton
         signOut={async () => {
